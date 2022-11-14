@@ -28,6 +28,8 @@ header {
 section {
     margin: auto 1em 4em 2em;
 }
+/* The `section` element is given some margin so that each section (SKILLS, EDUCATION, WORK EXPERIENCE) has spacing around it. The `p` element is also given some margin. */
+
 
 i {
     margin-right: .5em;
@@ -47,6 +49,8 @@ h1, h2 {
     font-weight: 100;
     margin-bottom: 0;
 }
+/* We're centering the text in the `header` element and adding a 2em margin to the left and the right so that the lines from the `hr` don't go all the way to the edge, but have a little padding.*/
+
 #mainLeft {
     border-right: 1px solid lightgray;
 }
