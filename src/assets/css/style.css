@@ -1,56 +1,149 @@
+@charset "UTF-8";
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
-    max-width: 960px;
-    margin: auto;
+  background: linear-gradient(rgb(241, 227, 245), #e5f4ef, #dff1f1, #deeef3, #acc8eb, #a3a4ec);
+}
+* {
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  border-radius: 10%;
+}
+
+.grid-container {
+  display: grid;
+ /* background-color: #e4e4f5;*/
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(9, 0, 0);
+  border-radius: 8px;
+  padding: 5px;
+  width: 20%;
+}
+/* Added an image hover color shadow effect */
+img:hover {
+  box-shadow: 0 0 20px 10px rgba(1, 46, 61, 0.5);
+  opacity: 0.7;
+}
+
+/* unvisited link */
+a:link {
+  color:purple;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
 h1 {
-    font-size: 3em;
-    letter-spacing: .6em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+  color: black;
+  text-align: center;
+}
+h1 {
+  text-shadow: 2px 2px lightblue;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(2, 2, 2);
+}
+
+.containerTab {
+  padding: 20px;
+  color: rgb(13, 12, 12);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: rgb(5, 5, 5);
+  font-size: 35px;
+  cursor: pointer;
 }
 
 h2 {
-    font-size: 1.5em;
-    padding-bottom: 1em;
+  color: black;
+  text-align: center;
 }
-main { 
-    display: grid;
-    grid-template-columns: 40% 60%;
-    margin-top: 3em;
-}
-header {
-    text-align: center;
-    margin: auto 2em;
-}
-
-section {
-    margin: auto 1em 4em 2em;
-}
-/* The `section` element is given some margin so that each section (SKILLS, EDUCATION, WORK EXPERIENCE) has spacing around it. The `p` element is also given some margin. */
-
-
-i {
-    margin-right: .5em;
+h3 {
+  color: black;
+  text-align: center;
 }
 
 p {
-    margin: .2em auto
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-hr {
-    border: none;
-    background-color: lightgray;
-    height: 1px;
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(244, 234, 246);
+  font-size: 20px;
+  color: rgb(11, 10, 10);
+  }
+
+.footer {
+  background-color: #addbf0;
+  color: hsl(0, 100%, 2%);
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
 }
 
-h1, h2 {
-    font-weight: 100;
-    margin-bottom: 0;
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
 }
-/* We're centering the text in the `header` element and adding a 2em margin to the left and the right so that the lines from the `hr` don't go all the way to the edge, but have a little padding.*/
 
-#mainLeft {
-    border-right: 1px solid lightgray;
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
