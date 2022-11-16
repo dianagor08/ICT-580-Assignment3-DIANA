@@ -1,32 +1,48 @@
 @charset "UTF-8";
 body {
-  background: linear-gradient(rgb(241, 227, 245), #e5f4ef, #dff1f1, #deeef3, #acc8eb, #a3a4ec);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+.gradient_bg:hover{
+   -webkit-animation: gradient 15s ease infinite;
+   animation: gradient 15s ease infinite;
+}
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+ 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 * {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Courier New', monospace;
   box-sizing: border-box;
   border-radius: 10%;
-}
-
-.grid-container {
-  display: grid;
- /* background-color: #e4e4f5;*/
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid rgb(9, 0, 0);
+  border: 3px dotted white;
   border-radius: 8px;
   padding: 5px;
   width: 20%;
@@ -39,12 +55,12 @@ img:hover {
 
 /* unvisited link */
 a:link {
-  color:purple;
+  color:white;
 }
 
 /* visited link */
 a:visited {
-  color: green;
+  color: blue;
 }
 
 /* mouse over link */
@@ -57,11 +73,9 @@ a:active {
   color: blue;
 }
 h1 {
-  color: black;
+  color: white;
+  text-shadow:2px 2px black; 
   text-align: center;
-}
-h1 {
-  text-shadow: 2px 2px lightblue;
 }
 * {
   box-sizing: border-box;
@@ -90,16 +104,9 @@ h1 {
   clear: both;
 }
 
-/* Closable button inside the container tab */
-.closebtn {
-  float: right;
-  color: rgb(5, 5, 5);
-  font-size: 35px;
-  cursor: pointer;
-}
-
 h2 {
-  color: black;
+  color: white;
+  text-shadow:2px 2px black;
   text-align: center;
 }
 h3 {
@@ -108,7 +115,7 @@ h3 {
 }
 
 p {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Courier New', monospace;
   font-size: 15px;
   color: black;
   text-align: center;
@@ -132,18 +139,4 @@ p {
   text-align: center;
   font-size: 12px;
   padding: 15px;
-}
-
-/* On screens that are 992px wide or less, go from four columns to two columns */
-@media screen and (max-width: 992px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
 }
